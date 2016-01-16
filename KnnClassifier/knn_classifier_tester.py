@@ -16,4 +16,4 @@ class KnnClassifierTester:
         results = classifier.predict(test_data)
         # Make sure we have enough answers for predictions
         assert len(results) == len(test_target)
-        return round(np.sum(results == test_target) / len(results), 3)
+        return np.sum(results == test_target) / len(results)
