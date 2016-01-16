@@ -3,7 +3,7 @@ import numpy as np
 
 class KnnClassifier:
     def __init__(self, n_neighbors=1):
-        pass
+        self.n_neighbors = n_neighbors
 
     def fit(self, train_data, train_target):
         pass
