@@ -1,8 +1,8 @@
 import unittest
 from KnnClassifier.KnnClassifier import KnnClassifier
 
-class TestKnnClassifier(unittest.TestCase):
 
+class TestKnnClassifier(unittest.TestCase):
     def test_classifier_can_predict(self):
         k = KnnClassifier()
 
