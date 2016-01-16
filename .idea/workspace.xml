@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f597f0cd-1bf5-4fd3-9ab7-0f58ad7e1354" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KnnClassifier/Driver.py" afterPath="$PROJECT_DIR$/KnnClassifier/Driver.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/KnnClassifier/knn_classifier.py" afterPath="$PROJECT_DIR$/KnnClassifier/knn_classifier.py" />
     </list>
     <ignored path="DataMining.iws" />
@@ -567,7 +566,13 @@
       <option name="project" value="LOCAL" />
       <updated>1452919984416</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Changed accuracy to percentage... basically I'm trying to avoid actually writing some code.">
+      <created>1452925716847</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1452925716848</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -631,7 +636,8 @@
     <MESSAGE value="Implemented test method." />
     <MESSAGE value="Added rounding." />
     <MESSAGE value="I changed my mind." />
-    <option name="LAST_COMMIT_MESSAGE" value="I changed my mind." />
+    <MESSAGE value="Changed accuracy to percentage... basically I'm trying to avoid actually writing some code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed accuracy to percentage... basically I'm trying to avoid actually writing some code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
