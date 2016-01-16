@@ -7,4 +7,4 @@ class KnnClassifier:
         pass
 
     def predict(self, test_data):
-        return 0;
+        return 0
