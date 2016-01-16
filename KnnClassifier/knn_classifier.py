@@ -1,5 +1,7 @@
-class KnnClassifier:
+import numpy as np
 
+
+class KnnClassifier:
     def __init__(self, n_neighbors=1):
         pass
 
@@ -7,4 +9,5 @@ class KnnClassifier:
         pass
 
     def predict(self, test_data):
-        return 0
+        # TODO predict values
+        return np.zeros(len(test_data))
