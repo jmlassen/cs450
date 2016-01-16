@@ -1,5 +1,5 @@
 import unittest
-from KnnClassifier.KnnClassifier import KnnClassifier
+from KnnClassifier.knn_classifier import KnnClassifier
 
 
 class TestKnnClassifier(unittest.TestCase):
