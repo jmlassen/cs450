@@ -29,10 +29,10 @@ class Driver:
         classifier.fit(data[:training_record_count], target[:training_record_count])
         results = tester.test(classifier, data[training_record_count:], target[training_record_count:])
         # Output results
-        print("Our KnnClassifier Results: {}% accuracy".format(round(results * 100, 3)))
+        print("Our KnnClassifier Results on Iris DB: {}% accuracy".format(round(results * 100, 3)))
 
         # Test their KnnClassifier
         their_classifier = KNeighborsClassifier(n_neighbors=K)
         their_classifier.fit(data[:training_record_count], target[:training_record_count])
         results = tester.test(their_classifier, data[training_record_count:], target[training_record_count:])
-        print("Their KNeighborsClassifier Results: {}% accuracy".format(round(results * 100, 3)))
+        print("Their KNeighborsClassifier Results on Iris DB: {}% accuracy".format(round(results * 100, 3)))
