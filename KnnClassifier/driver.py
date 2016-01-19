@@ -4,7 +4,7 @@ from KnnClassifier.knn_classifier import KnnClassifier
 from KnnClassifier.knn_classifier_tester import KnnClassifierTester
 
 TRAINING_DATA_PERCENTAGE = .7
-K = 3
+K = 6
 
 
 class Driver:
@@ -31,7 +31,7 @@ class Driver:
     def _run_generic_classification(self, sorted_data, sorted_target, test_name):
         data, target = shuffle(sorted_data, sorted_target)
         # Calculate the number of records that will be used to train the classifier
-        training_record_count = len(data) * TRAINING_DATA_PERCENTAGE
+        training_record_count = int(len(data) * TRAINING_DATA_PERCENTAGE)
         # Create tester
         tester = KnnClassifierTester()
 
