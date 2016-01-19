@@ -1,5 +1,5 @@
 import csv
-from KnnClassifier._car import Car
+from KnnClassifier.car import Car
 
 
 class CarProcessor:

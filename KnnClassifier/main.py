@@ -1,7 +1,7 @@
 from sklearn import datasets
 
 from KnnClassifier.car_processor import CarProcessor
-from KnnClassifier._driver import Driver
+from KnnClassifier.driver import Driver
 
 
 def main():
