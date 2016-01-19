@@ -1,4 +1,6 @@
 from sklearn import datasets
+
+from KnnClassifier.car_processor import CarProcessor
 from KnnClassifier.driver import Driver
 
 
@@ -7,7 +9,7 @@ def main():
     """
     driver = Driver()
     driver.run_iris_classification(datasets.load_iris())
-    driver.run_car_classification('car.data')
+    driver.run_car_classification(CarProcessor().load_car())
 
 
 if __name__ == '__main__':
