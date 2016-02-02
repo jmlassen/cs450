@@ -4,7 +4,7 @@ from KnnClassifier.knn_classifier import KnnClassifier
 from KnnClassifier.knn_classifier_tester import KnnClassifierTester
 
 TRAINING_DATA_PERCENTAGE = .7
-K = 6
+K = 3
 
 
 class Driver:
