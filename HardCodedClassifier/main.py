@@ -23,7 +23,7 @@ def test_classifier(classifier, dataset, train_data_count):
 
 def train_classifier(classifier, dataset):
     test_data_count = int(len(dataset.data) * .3)
-    classifier.train(dataset.data[test_data_count:-1], dataset.target[test_data_count:-1])
+    classifier.fit(dataset.data[test_data_count:-1], dataset.target[test_data_count:-1])
     return test_data_count
 
 
