@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f597f0cd-1bf5-4fd3-9ab7-0f58ad7e1354" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NeuralNetwork/neural_network.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NeuralNetwork/neuron.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/NeuralNetwork/utilities.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python_testing.py" />
@@ -685,7 +684,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455242992824</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added file, started implementing NeuralNetwork class.">
+      <created>1455243043116</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1455243043116</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -770,7 +775,8 @@
     <MESSAGE value="Added new file for assignment." />
     <MESSAGE value="Lots of changes." />
     <MESSAGE value="Separated code into files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Separated code into files." />
+    <MESSAGE value="Added file, started implementing NeuralNetwork class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added file, started implementing NeuralNetwork class." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
