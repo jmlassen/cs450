@@ -77,6 +77,8 @@ class NeuralNetwork:
         # Loop through each layer
         for n_layer in range(len(self.network)):
             inputs = self._run_inputs_through_layer(inputs, self.network[n_layer])
+        # Return the largest value found
+        return inputs.index(max(inputs))
 
     def _run_inputs_through_layer(self, inputs, layer):
         results = []
