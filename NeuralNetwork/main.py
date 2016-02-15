@@ -1,18 +1,19 @@
 import csv
 from sklearn import datasets
 
+from NeuralNetwork.neural_network import NeuralNetwork
 from NeuralNetwork.neuron import Neuron
-from NeuralNetwork.utilities import get_starting_weights
+from NeuralNetwork.utilities import get_starting_weights, cross_val_score
 
 
 def run_iris():
     # Load iris data set
     iris = datasets.load_iris()
     n_inputs = len(iris.data[0])
-    neuron = Neuron(get_starting_weights(n_inputs), get_starting_weights(1))
-    for point in iris.data:
-        fires = neuron.activates(point)
-        print("{} = {}".format(point, fires))
+    n_outputs = len(iris.target_names)
+    network = NeuralNetwork()
+    network.create_network(n_inputs, n_outputs, (3, 4))
+    print("Neural network results accuracy: {}".format(cross_val_score(network, iris.data, iris.target, 3)))
 
 
 def run_diabetes():
@@ -30,7 +31,7 @@ def run_diabetes():
 
 def main():
     run_iris()
-    run_diabetes()
+    # run_diabetes()
 
 
 if __name__ == "__main__":
