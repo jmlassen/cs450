@@ -11,7 +11,7 @@ def run_iris():
     n_inputs = len(iris.data[0])
     neuron = Neuron(get_starting_weights(n_inputs), get_starting_weights(1))
     for point in iris.data:
-        fires = neuron.fires(point)
+        fires = neuron.activates(point)
         print("{} = {}".format(point, fires))
 
 
@@ -24,7 +24,7 @@ def run_diabetes():
     n_inputs = len(data[0])
     neuron = Neuron(get_starting_weights(n_inputs), get_starting_weights(1))
     for point in data:
-        fires = neuron.fires(point)
+        fires = neuron.activates(point)
         print("{} = {}".format(point, fires))
 
 
