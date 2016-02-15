@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f597f0cd-1bf5-4fd3-9ab7-0f58ad7e1354" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeuralNetwork/neuron.py" afterPath="$PROJECT_DIR$/NeuralNetwork/neuron.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeuralNetwork/utilities.py" afterPath="$PROJECT_DIR$/NeuralNetwork/utilities.py" />
     </list>
     <ignored path="DataMining.iws" />
@@ -689,7 +688,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455565048018</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Converted activation function to sigmoid.">
+      <created>1455565078943</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1455565078943</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -753,7 +758,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Refactored names to follow convention...I think." />
     <MESSAGE value="Added comment." />
     <MESSAGE value="Added gitignore." />
     <MESSAGE value="Adding classifier tester...because it feels like we are separating responsibilities that way." />
@@ -778,7 +782,8 @@
     <MESSAGE value="Mucking around." />
     <MESSAGE value="Refactored." />
     <MESSAGE value="Implemented predict." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented predict." />
+    <MESSAGE value="Converted activation function to sigmoid." />
+    <option name="LAST_COMMIT_MESSAGE" value="Converted activation function to sigmoid." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
