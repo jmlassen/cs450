@@ -1,3 +1,5 @@
+import copy
+
 from NeuralNetwork.neuron import Neuron
 from NeuralNetwork.utilities import get_starting_weights
 
@@ -11,6 +13,8 @@ class NeuralNetwork:
         # Check to make sure inputs and outputs are greater than 0.
         if n_inputs < 1 or n_outputs < 1:
             raise Exception("n_inputs and n_outputs must be greater than 0!")
+        # Save n_inputs for error checking later.
+        self.n_inputs = n_inputs
         # Create each hidden layer
         for layer in hidden_layers:
             self._create_layer(layer)
@@ -24,6 +28,12 @@ class NeuralNetwork:
     def predict(self, data):
         # Check data first.
         self._check_data(data)
+        # Create container for results.
+        results = []
+        for point in data:
+            # Run point through network and save result.
+            results.append(self._run_point_through_network(point))
+        return results
 
     def _check_data(self, data):
         """Checks whether we are ready to run fit or predict on our network.
@@ -60,3 +70,16 @@ class NeuralNetwork:
             layer.append(Neuron(get_starting_weights(n_inputs), get_starting_weights(1)))
         # Append layer to the network.
         self.network.append(layer)
+
+    def _run_point_through_network(self, point):
+        # This probably isn't needed, but whatever.
+        inputs = copy.deepcopy(point)
+        # Loop through each layer
+        for n_layer in range(len(self.network)):
+            inputs = self._run_inputs_through_layer(inputs, self.network[n_layer])
+
+    def _run_inputs_through_layer(self, inputs, layer):
+        results = []
+        for neuron in layer:
+            results.append(neuron.activates(inputs))
+        return results
