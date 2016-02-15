@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f597f0cd-1bf5-4fd3-9ab7-0f58ad7e1354" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeuralNetwork/neural_network.py" afterPath="$PROJECT_DIR$/NeuralNetwork/neural_network.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeuralNetwork/neuron.py" afterPath="$PROJECT_DIR$/NeuralNetwork/neuron.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/NeuralNetwork/utilities.py" afterPath="$PROJECT_DIR$/NeuralNetwork/utilities.py" />
     </list>
@@ -684,7 +683,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455565002373</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Implemented predict.">
+      <created>1455565048018</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1455565048018</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -748,7 +753,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
-    <MESSAGE value="Added Driver class to keep things organized." />
     <MESSAGE value="Refactored names to follow convention...I think." />
     <MESSAGE value="Added comment." />
     <MESSAGE value="Added gitignore." />
@@ -773,7 +777,8 @@
     <MESSAGE value="Moved utility function and neuron class to individual files." />
     <MESSAGE value="Mucking around." />
     <MESSAGE value="Refactored." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored." />
+    <MESSAGE value="Implemented predict." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented predict." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
