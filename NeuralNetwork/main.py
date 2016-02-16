@@ -23,7 +23,7 @@ def run_diabetes():
         diabetes_reader = csv.reader(diabetes_file)
         for row in diabetes_reader:
             data.append([round(float(i), 2) for i in row[:8]])
-            target.append(row[8])
+            target.append(int(row[8]))
     n_inputs = len(data[0])
     n_outputs = len(set(target))
     network = NeuralNetwork()
