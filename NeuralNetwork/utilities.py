@@ -50,7 +50,7 @@ def cross_val_score(classifier, data, target, cv):
     return np.array(results)
 
 
-def calc_delta(a, t):
+def calc_output_delta(a, t):
     """
 
     :param a: Activation
