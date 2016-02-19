@@ -7,14 +7,32 @@ DEFAULT_WEIGHT_CEILING = 1
 
 
 def get_starting_weights(n_inputs):
+    """
+
+    :param n_inputs:
+    :return:
+    """
     return np.random.uniform(DEFAULT_WEIGHT_FLOOR, DEFAULT_WEIGHT_CEILING, n_inputs)
 
 
 def sigmoid(x):
+    """
+
+    :param x:
+    :return:
+    """
     return 1 / (1 + math.exp((-1 * x)))
 
 
 def cross_val_score(classifier, data, target, cv):
+    """
+
+    :param classifier:
+    :param data:
+    :param target:
+    :param cv:
+    :return:
+    """
     data, target = shuffle(data, target)
     fold_len = int(len(data) / cv)
     results = []
@@ -30,3 +48,25 @@ def cross_val_score(classifier, data, target, cv):
         accuracy = np.sum(prediction == target[start_index:end_index]) / len(prediction)
         results.append(accuracy)
     return np.array(results)
+
+
+def calc_delta(a, t):
+    """
+
+    :param a: Activation
+    :param t: Target
+    :return: The delta for the given data.
+    """
+    return a * (1 - a) * (a - t)
+
+
+def calc_updated_weight(w, l, d, a):
+    """
+
+    :param w: Weight
+    :param l: Learning rate
+    :param d: Delta
+    :param a: Activation
+    :return: New weight
+    """
+    return w - l * d * a
