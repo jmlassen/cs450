@@ -1,3 +1,5 @@
+import numpy as np
+
 from NeuralNetwork.utilities import sigmoid
 
 DEFAULT_BIAS = -1
@@ -10,7 +12,7 @@ class Neuron:
 
     """
 
-    def __init__(self, weights, bias_weight, bias=DEFAULT_BIAS, learning_rate=DEFAULT_LEARNING_RATE,
+    def __init__(self, weights, bias=DEFAULT_BIAS, learning_rate=DEFAULT_LEARNING_RATE,
                  threshold=DEFAULT_THRESHOLD):
         """Initializes our neuron.
 
@@ -21,7 +23,6 @@ class Neuron:
         :param threshold
         """
         self.weights = weights
-        self.bias_weight = bias_weight
         self.bias = bias
         self.learning_rate = learning_rate
         self.threshold = threshold
@@ -32,13 +33,7 @@ class Neuron:
         :param inputs: Array containing the inputs corresponding to the weights passed to the constructor
         :return: 1 if the neuron fires, 0 if it failed to fire
         """
-        # Ensure size of inputs is the same size as weights.
-        if len(inputs) != len(self.weights):
-            raise Exception('Size of inputs ({}) must be consistent with size of weights ({})!'
-                            .format(len(inputs), len(self.weights)))
-        # Start by adding the bias
-        total = self.bias * self.bias_weight
-        # Sum inputs
+        total = self.weights[0] * self.bias
         for i in range(len(inputs)):
-            total += inputs[i] * self.weights[i]
+            total += inputs[i] * self.weights[i + 1]
         return sigmoid(total)
