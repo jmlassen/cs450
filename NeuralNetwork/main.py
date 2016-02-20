@@ -20,9 +20,9 @@ def run_diabetes():
     target = []
     # Read data
     with open('pima-indians-diabetes.data') as diabetes_file:
-        diabetes_reader = csv.reader(diabetes_file)
+        diabetes_reader = csv.reader(diabetes_file, quoting=csv.QUOTE_NONNUMERIC)
         for row in diabetes_reader:
-            data.append([round(float(i), 2) for i in row[:8]])
+            data.append(row[:8])
             target.append(int(row[8]))
     n_inputs = len(data[0])
     n_outputs = len(set(target))
@@ -34,6 +34,9 @@ def run_diabetes():
 def main():
     run_iris()
     run_diabetes()
+#     data visualization:
+#     matplotlib
+#     bokeh
 
 
 if __name__ == "__main__":
