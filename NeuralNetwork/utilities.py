@@ -1,4 +1,6 @@
 import math
+import random
+
 import numpy as np
 from numpy.ma import around
 from sklearn.metrics import accuracy_score
@@ -15,9 +17,9 @@ def get_starting_weights(n_inputs):
     :param n_inputs:
     :return:
     """
-    weights = np.around(np.random.uniform(DEFAULT_WEIGHT_FLOOR, DEFAULT_WEIGHT_CEILING, n_inputs), decimals=3)
-    if 0 in weights:
-        raise Exception()
+    weights = []
+    for _ in range(n_inputs):
+        weights.append(random.uniform(DEFAULT_WEIGHT_FLOOR, DEFAULT_WEIGHT_CEILING))
     return weights
 
 

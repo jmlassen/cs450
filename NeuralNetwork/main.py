@@ -13,7 +13,8 @@ def run_iris():
     network = NeuralNetwork()
     network.create_network(n_inputs, n_outputs, (3, 4))
     data_scaled = preprocessing.scale(iris.data)
-    print("Neural network results accuracy: {}".format(cross_val_score(network, data_scaled, iris.target, 3)))
+    print("Their neural network results: {}".format(cross_val_score(nn, data_scaled, iris.target, 3)))
+    print("My neural network results: {}".format(cross_val_score(network, data_scaled, iris.target, 3)))
 
 
 def run_diabetes():
@@ -27,7 +28,7 @@ def run_diabetes():
             target.append(int(row[8]))
     n_inputs = len(data[0])
     n_outputs = len(set(target))
-    network = NeuralNetwork(learning_rate=.2)
+    network = NeuralNetwork()
     network.create_network(n_inputs, n_outputs, (3, 4))
     data_scaled = preprocessing.scale(np.array(data))
     print("Neural network results accuracy: {}".format(cross_val_score(network, data_scaled, np.array(target), 3)))
