@@ -1,6 +1,3 @@
-import numpy as np
-
-
 class Id3DecisionTreeClassifier:
     def fit(self, data, target):
         pass
