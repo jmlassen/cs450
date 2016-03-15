@@ -1,9 +1,20 @@
+import copy
+
 from sklearn.metrics import accuracy_score
 from sklearn.utils import shuffle
 import numpy as np
+import pandas as pd
 
 
 def cross_val_score(classifier, data, target, cv):
+    """Runs a cross validation test with a provided number of folds.
+
+    :param classifier: The classifier we want to test, must have 'fit' and 'predict' methods implemented
+    :param data:
+    :param target:
+    :param cv:
+    :return:
+    """
     data, target = shuffle(data, target)
     fold_len = int(len(data) / cv)
     results = []
@@ -17,3 +28,10 @@ def cross_val_score(classifier, data, target, cv):
         accuracy = accuracy_score(target[start_index:end_index], prediction)
         results.append(accuracy)
     return np.array(results)
+
+
+def bin_data(data, bin_count):
+    binned_data = np.array(copy.deepcopy(data))
+    for i in range(binned_data[0].size):
+        binned_data[:, i] = pd.cut(binned_data[:, i], bin_count, labels=list(range(bin_count)))
+    return binned_data

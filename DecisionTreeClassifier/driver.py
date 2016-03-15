@@ -11,7 +11,7 @@ class Driver:
 
     def run_iris(self):
         iris = load_iris()
-        self._run_generic(iris.data, iris.target, 'Iris')
+        self._run_generic_test(iris.data, iris.target, 'Iris')
 
     def run_lenses(self):
         pass
@@ -19,7 +19,7 @@ class Driver:
     def run_voting(self):
         pass
 
-    def _run_generic(self, data, target, name):
+    def _run_generic_test(self, data, target, name):
         print("Running classification test on {} data set".format(name))
         our_classifier = Id3DecisionTreeClassifier()
         our_results = cross_val_score(our_classifier, data, target, self.cv)
