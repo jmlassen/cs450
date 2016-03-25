@@ -33,5 +33,13 @@ def cross_val_score(classifier, data, target, cv):
 def bin_data(data, bin_count):
     binned_data = np.array(copy.deepcopy(data))
     for i in range(binned_data[0].size):
-        binned_data[:, i] = pd.cut(binned_data[:, i], bin_count, labels=list(range(bin_count)))
+        if len(np.unique(binned_data[:, i])) > bin_count:
+            binned_data[:, i] = pd.cut(binned_data[:, i], bin_count, labels=list(range(bin_count)))
     return binned_data
+
+
+def calculate_entropy(probability):
+    if probability != 0:
+        return -probability * np.log2(probability)
+    else:
+        return 0
